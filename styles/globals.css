@@ -36,6 +36,10 @@ p{
   color: var(--hcolor);
 }
 
+small{
+  color: var(--hcolor);
+}
+
 /*Navbar*/
 .Navbar{
   width: 100%;
@@ -150,6 +154,7 @@ p{
   }
 
   .menu-on > ul > li{
+    transition: all 0.2s ease-in-out;
     display: block;
   }
 
@@ -159,8 +164,10 @@ p{
     color: var(--hcolor);
   }
 
-  .menu-on > ul > li > a:hover{
-    transform: translateY(10px);
+  .menu-on > ul > li:hover{
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.2s;
+    transform: translateX(0.5rem);
   }
   
 
@@ -168,19 +175,29 @@ p{
 
 /*Footer*/
 .Footer{
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(255,255,255,0.2);
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 
 /*Index file*/
 .container{
   margin: 0;
+  padding-bottom: 0;
   padding-right:50px;
   padding-left: 50px;
 }
 
 /*Components - Hero*/
 .Hero{
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,7 +281,7 @@ p{
   left: 0;
   position: absolute;
   filter: blur(50px);
-  transform: translateY(20px) scale(1.2);
+  transform: translateY(0px) scale(1.2);
   opacity: 0.2;
 }
 .Card:nth-child(1n)::before{
