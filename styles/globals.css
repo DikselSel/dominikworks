@@ -8,6 +8,12 @@
   --gradinet-text: linear-gradient(-45deg, #00f260, #0575e6);
 }
 
+.mainContainer{
+  min-height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
 
 body {
   padding: 0;
@@ -175,6 +181,8 @@ small{
 
 /*Footer*/
 .Footer{
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +190,7 @@ small{
   width: 100%;
   background-color: rgba(255,255,255,0.2);
   margin-top: 4rem;
-  padding: 2rem 0;
+  padding: 2em 0;
   border-top: 1px solid rgba(255,255,255,0.2);
 }
 
@@ -244,6 +252,7 @@ small{
 /*Components - Oferty*/
 
 .Oferty{
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -258,7 +267,7 @@ small{
   display: flex;
   flex-direction: column;
   width: 250px;
-  height: 200px;
+  height: 250px;
 
   padding: 1rem 2rem;
 
