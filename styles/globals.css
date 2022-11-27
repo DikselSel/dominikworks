@@ -36,6 +36,142 @@ p{
   color: var(--hcolor);
 }
 
+/*Navbar*/
+.Navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  padding: 1.5rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+  flex-direction: row;
+  gap: 2rem;
+
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255, 0.3);
+  background-color: rgba(255,255,255, 0.2);
+}
+
+.Navbar > ul {
+  list-style: none;
+  padding: 0;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Navbar > ul > li > a{
+  text-decoration: none;
+  color: var(--hcolor);
+}
+
+.Navbar > img{
+  width: 150px;
+}
+
+.Navbar-mobile{
+  display: none;
+}
+
+.menu-off{
+  display: none;
+}
+
+.menu-on{
+  display: none;
+}
+
+
+@media only screen and (max-width: 735px) {
+  .Navbar{
+    display: none;
+  }
+
+  .Navbar-mobile{
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 30%;
+    padding: 1rem 0;
+
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255, 0.3);
+    background-color: rgba(255,255,255, 0.2);
+
+  }
+
+  .Navbar-mobile > img{
+    width: 150px;
+  }
+
+  .Navbar-mobile > button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border: none;
+    color: var(--hcolor);
+    font-size: 1.5rem;
+  }
+
+  .menu-on{
+    position: fixed;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    top: 70px;
+    right: 40px;
+    height: 150px;
+    width: 100px;;
+    padding: 1rem 2rem;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255, 0.3);
+    border-radius: 10px;
+  }
+
+  .menu-on > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    height: 100%;
+    padding: 0;
+  }
+
+  .menu-on > ul > li{
+    display: block;
+  }
+
+  .menu-on > ul > li > a{
+    text-align: left;
+    text-decoration: none;
+    color: var(--hcolor);
+  }
+
+  .menu-on > ul > li > a:hover{
+    transform: translateY(10px);
+  }
+  
+
+}
+
+/*Footer*/
+.Footer{
+
+}
+
+
 /*Index file*/
 .container{
   margin: 0;
