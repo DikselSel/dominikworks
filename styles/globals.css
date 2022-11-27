@@ -1,26 +1,145 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap');
+
+:root{
+  --bgcolor: #1e1e1e;
+  --hcolor: #fff;
+  --gradient-background: linear-gradient(90deg, #1e1e1e, #131313);
+  --gradinet-text: linear-gradient(-45deg, #00f260, #0575e6);
+}
+
+
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: var(--gradient-background);
+  font-family: 'Open Sans', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
+/*headers*/
+h1{
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  background: transparent;
+  background-image: var(--gradinet-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/*paragraph*/
+p{
+  margin: 0;
+  color: var(--hcolor);
+}
+
+/*Index file*/
+.container{
+  margin: 0;
+  padding-right:50px;
+  padding-left: 50px;
+}
+
+/*Components - Hero*/
+.Hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+}
+
+.Hero > p{
+  text-align: center;
+}
+
+.Hero > a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: 2em;
   text-decoration: none;
+
+  color: var(--hcolor);
+
+  background: transparent;;
+  
+  border-image: var(--gradinet-text);
+  border-style: solid;
+  border-image-slice: 1;
+  border-width: 4px;
+
+  padding: 0.5rem 1rem;
+
+  transition: all 0.5s ease-in;
+  transition-delay: 0.2s;
 }
 
-* {
-  box-sizing: border-box;
+.Hero > a:hover{
+
+  transform: scale(1.1);
+
+  box-shadow: 0px 2px 100px 1px rgba(0, 242, 96, 0.50);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/*Components - Oferty*/
+
+.Oferty{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+/*Components - OfertyCard*/
+.Card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 200px;
+
+  padding: 1rem 2rem;
+
+  background-color: rgba(255,255,255, 0.2);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 10px;;
+  backdrop-filter: blur(20px);
+}
+
+.Card > p{
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.Card::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  filter: blur(50px);
+  transform: translateY(20px) scale(1.2);
+  opacity: 0.2;
+}
+.Card:nth-child(1n)::before{
+  background-image: var(--gradinet-text);
+}
+
+
+.CardHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--hcolor);
 }
